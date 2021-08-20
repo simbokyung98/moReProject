@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="../static/css/style2.css">
+<link rel="stylesheet" href="../static/css/main.css">
+<head>
+<meta charset="UTF-8">
+<title>모두의 레시피</title>
+
+</head>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script th:src="@{../static/js/main.js}"></script>
+<body>
+<div th:replace="fragments/header :: header"></div>
+<main id="moma_main_wrap">
+   <div data-role="slider" data-width="1200" data-height="350" id="slidewrap">
+        <div class="container">
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
+            </div>
+           </div>
+         </div>
+       <button id="left-button"></button>
+       <button id="right-button"></button>
+       
+       <div id="main_content_wrap">
+          
+          <div class="main_recom_recipe_wrap">
+          <h2 class="mian_content_title">추천 레시피 <button class="main_content_but"><img alt="plus" src="../static/img/plus.png" style="width: 25px; height: 25px;"> </button> </h2>
+             <div id="main_recom_reci_content_wrap">
+                <div class="main_recom_recipe mrr_frist">
+                  <iframe width="250" height="150" src="https://www.youtube.com/embed/BqxpjY7TJ8g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               </div>
+               <div class="main_recom_recipe">
+                  <iframe width="250" height="150" src="https://www.youtube.com/embed/5iRPP3nqCJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               </div>
+               <div class="main_recom_recipe">
+                  <iframe width="250" height="150" src="https://www.youtube.com/embed/wPxuQdfYErk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               </div>
+               <div class="main_recom_recipe">
+                  <iframe width="250" height="150" src="https://www.youtube.com/embed/_qnLV46GSr4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               </div>
+            </div>
+          </div>
+          
+          
+          <div class="all_meter-wrap">
+             <h2 class="mian_content_title">오늘의 재료 <button class="main_content_but"><img alt="plus" src="../static/img/plus.png" style="width: 25px; height: 25px;"></button> </h2>
+            <div class="cut_side">
+               <ul class="meter_list">
+                  <li class="meter_item">
+                     <a href="meter_detail.jsp">
+                        <div class="meter_size">
+                           <div class="meter_img_wrap">
+                              <div class="meter_img">
+                                 <img alt="돼지고기 다짐육" src="../static/img/chop_pig.jpg">
+                              </div>
+                              <div class="meter_cart">
+                                 <button type="button" class="meter_cart_but"><img alt="장바구니" src="../static/img/cart.png"> </button>
+                              </div>
+                           </div>
+                           <div class="meter_text">
+                              <div class="meter_full">
+                                 <div class="meter_title"><strong>[냉장]돼지고기 다짐육(한돈) , 200g</strong></div>
+                                 <div class="meter_price">3,000원</div>
+                                 <div class="meter_g">(100g 당 1,500원)</div>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </li>
+                  <li class="meter_item">
+                     <a href="meter_detail.jsp">
+                        <div class="meter_size">
+                           <div class="meter_img_wrap">
+                              <div class="meter_img">
+                                 <img alt="소고기 다짐육" src="../static/img/chop_beef.jpg">
+                              </div>
+                              <div class="meter_cart">
+                                 <button type="button" class="meter_cart_but"><img alt="장바구니" src="../static/img/cart.png"> </button>
+                              </div>
+                           </div>
+                           <div class="meter_text">
+                              
+                              <div class="meter_full">
+                                 <div class="meter_title"><strong >[냉장]소고기 다짐육(한우), 200g</strong></div>
+                                 <div class="meter_price">20,000원</div>
+                                 <div class="meter_g">(100g 당 10,000원)</div>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </li>
+                  <li class="meter_item">
+                     <a href="meter_detail.jsp">
+                        <div class="meter_size">
+                           <div class="meter_img_wrap">
+                              <div class="meter_img">
+                                 <img alt="소고기 패티" src="../static/img/hambuger_beef.jpg">
+                              </div>
+                              <div class="meter_cart">
+                                 <button type="button" class="meter_cart_but"><img alt="장바구니" src="../static/img/cart.png"> </button>
+                              </div>
+                           </div>
+                           <div class="meter_text">
+                              
+                              <div class="meter_full">
+                                 <div class="meter_title"><strong >[냉장]소고기 패티 , 400g</strong></div>
+                                 <div class="meter_price">16,000원</div>
+                                 <div class="meter_g">(100g 당 4,000원)</div>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </li>
+                  <li class="meter_item">
+                     <a href="meter_detail.jsp">
+                        <div class="meter_size">
+                           <div class="meter_img_wrap">
+                              <div class="meter_img">
+                                 <img alt="등갈비" src="../static/img/back_ribs_pig.jpg">
+                              </div>
+                              <div class="meter_cart">
+                                 <button type="button" class="meter_cart_but"><img alt="장바구니" src="../static/img/cart.png"> </button>
+                              </div>
+                           </div>
+                           <div class="meter_text">
+                              
+                              <div class="meter_full">
+                                 <div class="meter_title"><strong >[냉장]돼지고기 등갈비(한돈),600g</strong></div>
+                                 <div class="meter_price">12,000원</div>
+                                 <div class="meter_g">(100g 당 2,000원)</div>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+          </div>
+       </div>   
+       
+</main>
+<footer>
+   <div th:replace="fragments/footer::footer"></div>
+</footer>
+</body>
+</html>
