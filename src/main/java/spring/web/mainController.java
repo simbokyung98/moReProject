@@ -41,4 +41,15 @@ public class mainController {
 
         return "meterialMain";
     }
+
+    //재료 세부 띄우기
+    @GetMapping("/meter_detail/{materialKey}")
+    public String meterdetail(@PathVariable("materialKey") Long materialKey, Model model){
+
+        MaterialDto materialDto = materialService.getMaterial(materialKey);
+
+        model.addAttribute("material", materialDto);
+
+        return "meter_detail";
+    }
 }

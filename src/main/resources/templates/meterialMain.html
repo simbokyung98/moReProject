@@ -152,7 +152,7 @@
 			</li>
 
 			<li class="meter_item" th:each = "materialDto : ${materialList}">
-				<a href="meter_detail.jsp">
+				<a th:href="@{'/meter_detail/'+${materialDto.materialKey}}">
 					<div class="meter_size">
 						<div class="meter_img_wrap">
 							<div class="meter_img">

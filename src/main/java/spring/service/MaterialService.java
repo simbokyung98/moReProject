@@ -48,6 +48,19 @@ public class MaterialService {
         return materialDtoList;
     }
 
+    //재료 세부 목록 보기
+    public MaterialDto getMaterial(Long materialKey){
+        Optional<Material> optionalMaterial = materialRepository.findById(materialKey);
+        Material material = optionalMaterial.get();
+
+        MaterialDto materialDto = MaterialDto.builder()
+                .materialKey(material.getMaterialKey())
+                .materialTitle(material.getMaterialTitle())
+                .materialImg(material.getMaterialImg()).build();
+
+        return materialDto;
+    }
+
 
 
 
